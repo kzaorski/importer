@@ -1,0 +1,31 @@
+{
+  "_type": "export",
+  "__export_format": 4,
+  "resources": [
+    {
+      "_id": "wrk_minimal",
+      "_type": "workspace",
+      "name": "Minimal Collection"
+    },
+    {
+      "_id": "req_minimal",
+      "_type": "request",
+      "parentId": "wrk_minimal",
+      "name": "Minimal Request",
+      "method": "GET",
+      "url": "https://api.example.com/test"
+    },
+    {
+      "_id": "req_no_headers",
+      "_type": "request",
+      "parentId": "wrk_minimal",
+      "name": "No Headers",
+      "method": "POST",
+      "url": "https://api.example.com/data",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\"key\": \"value\"}"
+      }
+    }
+  ]
+}

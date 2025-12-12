@@ -1,0 +1,153 @@
+{
+  "_type": "export",
+  "__export_format": 4,
+  "__export_date": "2024-12-08T00:00:00.000Z",
+  "__export_source": "insomnia.desktop.app:v2023.5.8",
+  "resources": [
+    {
+      "_id": "wrk_jsonplaceholder",
+      "_type": "workspace",
+      "parentId": null,
+      "name": "JSONPlaceholder API",
+      "description": "Free fake API for testing and prototyping",
+      "scope": "collection"
+    },
+    {
+      "_id": "env_jsonplaceholder",
+      "_type": "environment",
+      "parentId": "wrk_jsonplaceholder",
+      "name": "Base Environment",
+      "data": {
+        "base_url": "https://jsonplaceholder.typicode.com",
+        "user_id": "1",
+        "post_id": "1"
+      }
+    },
+    {
+      "_id": "fld_posts",
+      "_type": "request_group",
+      "parentId": "wrk_jsonplaceholder",
+      "name": "Posts",
+      "description": "Post endpoints",
+      "metaSortKey": -1000000001
+    },
+    {
+      "_id": "req_list_posts",
+      "_type": "request",
+      "parentId": "fld_posts",
+      "name": "List Posts",
+      "method": "GET",
+      "url": "{{base_url}}/posts",
+      "headers": [
+        {"id": "pair_1", "name": "Accept", "value": "application/json"}
+      ],
+      "body": {},
+      "authentication": {},
+      "metaSortKey": -1000000003
+    },
+    {
+      "_id": "req_get_post",
+      "_type": "request",
+      "parentId": "fld_posts",
+      "name": "Get Post",
+      "method": "GET",
+      "url": "{{base_url}}/posts/{{post_id}}",
+      "headers": [
+        {"id": "pair_2", "name": "Accept", "value": "application/json"}
+      ],
+      "body": {},
+      "authentication": {},
+      "metaSortKey": -1000000002
+    },
+    {
+      "_id": "req_create_post",
+      "_type": "request",
+      "parentId": "fld_posts",
+      "name": "Create Post",
+      "method": "POST",
+      "url": "{{base_url}}/posts",
+      "headers": [
+        {"id": "pair_3", "name": "Content-Type", "value": "application/json"}
+      ],
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\"title\": \"foo\", \"body\": \"bar\", \"userId\": {{user_id}}}"
+      },
+      "authentication": {},
+      "metaSortKey": -1000000001
+    },
+    {
+      "_id": "req_update_post",
+      "_type": "request",
+      "parentId": "fld_posts",
+      "name": "Update Post",
+      "method": "PUT",
+      "url": "{{base_url}}/posts/{{post_id}}",
+      "headers": [
+        {"id": "pair_4", "name": "Content-Type", "value": "application/json"}
+      ],
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\"id\": {{post_id}}, \"title\": \"updated\", \"body\": \"updated body\", \"userId\": {{user_id}}}"
+      },
+      "authentication": {},
+      "metaSortKey": -1000000000
+    },
+    {
+      "_id": "req_delete_post",
+      "_type": "request",
+      "parentId": "fld_posts",
+      "name": "Delete Post",
+      "method": "DELETE",
+      "url": "{{base_url}}/posts/{{post_id}}",
+      "headers": [],
+      "body": {},
+      "authentication": {},
+      "metaSortKey": -999999999
+    },
+    {
+      "_id": "fld_users",
+      "_type": "request_group",
+      "parentId": "wrk_jsonplaceholder",
+      "name": "Users",
+      "description": "User endpoints",
+      "metaSortKey": -1000000000
+    },
+    {
+      "_id": "req_list_users",
+      "_type": "request",
+      "parentId": "fld_users",
+      "name": "List Users",
+      "method": "GET",
+      "url": "{{base_url}}/users",
+      "headers": [],
+      "body": {},
+      "authentication": {},
+      "metaSortKey": -1000000001
+    },
+    {
+      "_id": "req_get_user",
+      "_type": "request",
+      "parentId": "fld_users",
+      "name": "Get User",
+      "method": "GET",
+      "url": "{{base_url}}/users/{{user_id}}",
+      "headers": [],
+      "body": {},
+      "authentication": {},
+      "metaSortKey": -1000000000
+    },
+    {
+      "_id": "req_user_posts",
+      "_type": "request",
+      "parentId": "fld_users",
+      "name": "Get User Posts",
+      "method": "GET",
+      "url": "{{base_url}}/users/{{user_id}}/posts",
+      "headers": [],
+      "body": {},
+      "authentication": {},
+      "metaSortKey": -999999999
+    }
+  ]
+}

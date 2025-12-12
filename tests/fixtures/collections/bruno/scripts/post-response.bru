@@ -1,0 +1,17 @@
+meta {
+  name: Request with Post-Script
+  type: http
+  seq: 2
+}
+
+get {
+  url: {{base_url}}/data
+  body: none
+}
+
+script:post-response {
+  const data = res.body;
+  bru.setVar('response_id', data.id);
+  bru.setVar('response_timestamp', Date.now());
+  console.log('Post-response script executed');
+}

@@ -1,0 +1,60 @@
+{
+  "_type": "export",
+  "__export_format": 4,
+  "__export_date": "2024-12-08T00:00:00.000Z",
+  "__export_source": "insomnia.desktop.app:v2023.5.8",
+  "resources": [
+    {
+      "_id": "wrk_basic",
+      "_type": "workspace",
+      "parentId": null,
+      "name": "Basic Auth Test",
+      "scope": "collection"
+    },
+    {
+      "_id": "env_basic",
+      "_type": "environment",
+      "parentId": "wrk_basic",
+      "name": "Base Environment",
+      "data": {
+        "base_url": "https://api.example.com",
+        "username": "testuser",
+        "password": "testpass123"
+      }
+    },
+    {
+      "_id": "req_basic_protected",
+      "_type": "request",
+      "parentId": "wrk_basic",
+      "name": "Basic Protected",
+      "method": "GET",
+      "url": "{{base_url}}/basic-auth",
+      "headers": [],
+      "body": {},
+      "authentication": {
+        "type": "basic",
+        "username": "{{username}}",
+        "password": "{{password}}"
+      },
+      "parameters": [],
+      "metaSortKey": -1000000000
+    },
+    {
+      "_id": "req_static_basic",
+      "_type": "request",
+      "parentId": "wrk_basic",
+      "name": "Static Basic Auth",
+      "method": "GET",
+      "url": "{{base_url}}/admin",
+      "headers": [],
+      "body": {},
+      "authentication": {
+        "type": "basic",
+        "username": "admin",
+        "password": "secret"
+      },
+      "parameters": [],
+      "metaSortKey": -999999999
+    }
+  ]
+}

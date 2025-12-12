@@ -1,0 +1,25 @@
+{
+  "id": "env-test-disabled",
+  "name": "Test Environment with Disabled Vars",
+  "values": [
+    {
+      "key": "active_var",
+      "value": "active-value",
+      "enabled": true
+    },
+    {
+      "key": "disabled_var",
+      "value": "disabled-value",
+      "enabled": false
+    },
+    {
+      "key": "",
+      "value": "empty-key-value",
+      "enabled": true
+    },
+    {
+      "key": "another_active",
+      "value": "another-active-value"
+    }
+  ]
+}

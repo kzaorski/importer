@@ -1,0 +1,16 @@
+meta {
+  name: Get Repository
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{base_url}}/repos/{{owner}}/{{repo}}
+  body: none
+}
+
+headers {
+  Accept: application/vnd.github.v3+json
+  User-Agent: Bruno-API-Client
+  Authorization: Bearer {{github_token}}
+}

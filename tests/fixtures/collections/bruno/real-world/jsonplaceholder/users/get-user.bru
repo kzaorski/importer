@@ -1,0 +1,14 @@
+meta {
+  name: Get User by ID
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{base_url}}/users/{{user_id}}
+  body: none
+}
+
+headers {
+  Accept: application/json
+}

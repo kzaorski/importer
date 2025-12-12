@@ -1,0 +1,49 @@
+{
+  "_type": "export",
+  "__export_format": 4,
+  "__export_date": "2024-12-08T00:00:00.000Z",
+  "resources": [
+    {
+      "_id": "wrk_test",
+      "_type": "workspace",
+      "parentId": null,
+      "name": "Auth Edge Cases Test"
+    },
+    {
+      "_id": "req_empty_auth_type",
+      "_type": "request",
+      "parentId": "wrk_test",
+      "name": "Empty Auth Type",
+      "method": "GET",
+      "url": "/api/empty-auth",
+      "authentication": {
+        "type": ""
+      }
+    },
+    {
+      "_id": "req_bearer_no_token",
+      "_type": "request",
+      "parentId": "wrk_test",
+      "name": "Bearer Without Token",
+      "method": "GET",
+      "url": "/api/bearer-no-token",
+      "authentication": {
+        "type": "bearer",
+        "token": ""
+      }
+    },
+    {
+      "_id": "req_unknown_auth",
+      "_type": "request",
+      "parentId": "wrk_test",
+      "name": "Unknown Auth Type",
+      "method": "GET",
+      "url": "/api/unknown-auth",
+      "authentication": {
+        "type": "digest",
+        "username": "user",
+        "password": "pass"
+      }
+    }
+  ]
+}

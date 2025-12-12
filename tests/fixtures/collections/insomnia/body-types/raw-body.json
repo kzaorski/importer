@@ -1,0 +1,64 @@
+{
+  "_type": "export",
+  "__export_format": 4,
+  "__export_date": "2024-12-08T00:00:00.000Z",
+  "__export_source": "insomnia.desktop.app:v2023.5.8",
+  "resources": [
+    {
+      "_id": "wrk_raw",
+      "_type": "workspace",
+      "parentId": null,
+      "name": "Raw Body Test",
+      "scope": "collection"
+    },
+    {
+      "_id": "req_plain_text",
+      "_type": "request",
+      "parentId": "wrk_raw",
+      "name": "Plain Text",
+      "method": "POST",
+      "url": "https://api.example.com/text",
+      "headers": [
+        {"id": "pair_1", "name": "Content-Type", "value": "text/plain"}
+      ],
+      "body": {
+        "mimeType": "text/plain",
+        "text": "Hello, this is plain text content with {{variable}}"
+      },
+      "authentication": {},
+      "parameters": [],
+      "metaSortKey": -1000000000
+    },
+    {
+      "_id": "req_xml",
+      "_type": "request",
+      "parentId": "wrk_raw",
+      "name": "XML Body",
+      "method": "POST",
+      "url": "https://api.example.com/xml",
+      "headers": [
+        {"id": "pair_2", "name": "Content-Type", "value": "application/xml"}
+      ],
+      "body": {
+        "mimeType": "application/xml",
+        "text": "<?xml version=\"1.0\"?><user><name>{{user_name}}</name><id>{{user_id}}</id></user>"
+      },
+      "authentication": {},
+      "parameters": [],
+      "metaSortKey": -999999999
+    },
+    {
+      "_id": "req_no_body",
+      "_type": "request",
+      "parentId": "wrk_raw",
+      "name": "No Body",
+      "method": "DELETE",
+      "url": "https://api.example.com/resource/123",
+      "headers": [],
+      "body": {},
+      "authentication": {},
+      "parameters": [],
+      "metaSortKey": -999999998
+    }
+  ]
+}

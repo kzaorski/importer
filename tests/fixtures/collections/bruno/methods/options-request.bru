@@ -1,0 +1,15 @@
+meta {
+  name: Options Request
+  type: http
+  seq: 4
+}
+
+options {
+  url: {{base_url}}/resources
+  body: none
+}
+
+headers {
+  Origin: http://localhost:3000
+  Access-Control-Request-Method: POST
+}

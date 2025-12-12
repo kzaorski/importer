@@ -1,0 +1,28 @@
+{
+  "_type": "export",
+  "__export_format": 4,
+  "__export_date": "2024-12-08T00:00:00.000Z",
+  "resources": [
+    {
+      "_id": "wrk_test",
+      "_type": "workspace",
+      "parentId": null,
+      "name": "Disabled Headers Test"
+    },
+    {
+      "_id": "req_headers",
+      "_type": "request",
+      "parentId": "wrk_test",
+      "name": "Request With Disabled Headers",
+      "method": "GET",
+      "url": "/api/test",
+      "headers": [
+        {"id": "h1", "name": "Active-Header", "value": "active-value"},
+        {"id": "h2", "name": "Disabled-Header", "value": "disabled-value", "disabled": true},
+        {"id": "h3", "name": "", "value": "empty-name-value"},
+        "not-a-dict-header",
+        {"id": "h4", "name": "Another-Active", "value": "another-value"}
+      ]
+    }
+  ]
+}

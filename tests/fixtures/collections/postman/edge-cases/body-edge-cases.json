@@ -1,0 +1,97 @@
+{
+  "info": {
+    "name": "Body Edge Cases Collection",
+    "schema": "https://schema.postman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Invalid JSON Raw Body",
+      "request": {
+        "method": "POST",
+        "url": "/api/invalid-json",
+        "body": {
+          "mode": "raw",
+          "raw": "{not valid json}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        }
+      }
+    },
+    {
+      "name": "Disabled Urlencoded Params",
+      "request": {
+        "method": "POST",
+        "url": "/api/form",
+        "body": {
+          "mode": "urlencoded",
+          "urlencoded": [
+            {
+              "key": "active_param",
+              "value": "active-value",
+              "disabled": false
+            },
+            {
+              "key": "disabled_param",
+              "value": "disabled-value",
+              "disabled": true
+            },
+            {
+              "key": "",
+              "value": "empty-key-value"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "Disabled Formdata Params",
+      "request": {
+        "method": "POST",
+        "url": "/api/formdata",
+        "body": {
+          "mode": "formdata",
+          "formdata": [
+            {
+              "key": "text_field",
+              "value": "text-value",
+              "type": "text"
+            },
+            {
+              "key": "disabled_field",
+              "value": "disabled-value",
+              "type": "text",
+              "disabled": true
+            },
+            {
+              "key": "file_field",
+              "value": "/path/to/file.txt",
+              "type": "file"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "Unknown Body Mode",
+      "request": {
+        "method": "POST",
+        "url": "/api/unknown-mode",
+        "body": {
+          "mode": "custom_mode",
+          "data": "some data"
+        }
+      }
+    },
+    {
+      "name": "Empty Body",
+      "request": {
+        "method": "POST",
+        "url": "/api/empty-body",
+        "body": null
+      }
+    }
+  ]
+}

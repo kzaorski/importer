@@ -1,0 +1,21 @@
+meta {
+  name: Update Resource
+  type: http
+  seq: 1
+}
+
+put {
+  url: {{base_url}}/resources/{{resource_id}}
+  body: json
+}
+
+headers {
+  Content-Type: application/json
+}
+
+body:json {
+  {
+    "name": "Updated Name",
+    "value": 42
+  }
+}

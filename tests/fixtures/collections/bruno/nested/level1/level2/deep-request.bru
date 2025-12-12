@@ -1,0 +1,14 @@
+meta {
+  name: Deeply Nested Request
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{base_url}}/nested/deep/resource
+  body: none
+}
+
+headers {
+  Accept: application/json
+}

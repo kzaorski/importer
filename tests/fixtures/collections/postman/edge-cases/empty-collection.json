@@ -1,0 +1,10 @@
+{
+  "info": {
+    "name": "Empty Collection",
+    "_postman_id": "empty-001",
+    "description": "Collection with no requests",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [],
+  "variable": []
+}

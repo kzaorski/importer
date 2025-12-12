@@ -1,0 +1,104 @@
+{
+  "_type": "export",
+  "__export_format": 4,
+  "__export_date": "2024-12-08T00:00:00.000Z",
+  "__export_source": "insomnia.desktop.app:v2023.5.8",
+  "resources": [
+    {
+      "_id": "wrk_test",
+      "_type": "workspace",
+      "parentId": null,
+      "name": "Test Collection",
+      "description": "A test Insomnia collection for unit tests",
+      "scope": "collection"
+    },
+    {
+      "_id": "env_base",
+      "_type": "environment",
+      "parentId": "wrk_test",
+      "name": "Base Environment",
+      "data": {
+        "base_url": "https://api.example.com",
+        "token": "test-token-123"
+      }
+    },
+    {
+      "_id": "fld_users",
+      "_type": "request_group",
+      "parentId": "wrk_test",
+      "name": "Users",
+      "description": "User management endpoints",
+      "metaSortKey": -1000000002
+    },
+    {
+      "_id": "req_get_users",
+      "_type": "request",
+      "parentId": "fld_users",
+      "name": "Get Users",
+      "method": "GET",
+      "url": "{{base_url}}/users",
+      "headers": [
+        {"id": "pair_1", "name": "Accept", "value": "application/json"}
+      ],
+      "body": {},
+      "authentication": {},
+      "parameters": [],
+      "metaSortKey": -1000000001
+    },
+    {
+      "_id": "req_get_user",
+      "_type": "request",
+      "parentId": "fld_users",
+      "name": "Get User by ID",
+      "method": "GET",
+      "url": "{{base_url}}/users/{{user_id}}",
+      "headers": [
+        {"id": "pair_2", "name": "Accept", "value": "application/json"}
+      ],
+      "body": {},
+      "authentication": {},
+      "parameters": [],
+      "metaSortKey": -1000000000
+    },
+    {
+      "_id": "req_create_user",
+      "_type": "request",
+      "parentId": "fld_users",
+      "name": "Create User",
+      "method": "POST",
+      "url": "{{base_url}}/users",
+      "headers": [
+        {"id": "pair_3", "name": "Content-Type", "value": "application/json"},
+        {"id": "pair_4", "name": "Accept", "value": "application/json"}
+      ],
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\"name\": \"{{user_name}}\", \"email\": \"{{user_email}}\"}"
+      },
+      "authentication": {},
+      "parameters": [],
+      "metaSortKey": -999999999
+    },
+    {
+      "_id": "fld_posts",
+      "_type": "request_group",
+      "parentId": "wrk_test",
+      "name": "Posts",
+      "description": "Post management endpoints",
+      "metaSortKey": -1000000001
+    },
+    {
+      "_id": "req_get_posts",
+      "_type": "request",
+      "parentId": "fld_posts",
+      "name": "Get Posts",
+      "method": "GET",
+      "url": "{{base_url}}/posts",
+      "headers": [],
+      "body": {},
+      "authentication": {},
+      "parameters": [],
+      "metaSortKey": -1000000000
+    }
+  ]
+}

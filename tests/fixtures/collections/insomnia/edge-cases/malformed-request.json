@@ -1,0 +1,29 @@
+{
+  "_type": "export",
+  "__export_format": 4,
+  "__export_date": "2024-12-08T00:00:00.000Z",
+  "resources": [
+    {
+      "_id": "wrk_test",
+      "_type": "workspace",
+      "parentId": null,
+      "name": "Test Collection"
+    },
+    {
+      "_id": "req_valid",
+      "_type": "request",
+      "parentId": "wrk_test",
+      "name": "Valid Request",
+      "method": "GET",
+      "url": "/api/valid"
+    },
+    {
+      "_id": "req_malformed",
+      "_type": "request",
+      "parentId": "wrk_test",
+      "name": "Malformed Request",
+      "method": "INVALID_METHOD_THAT_WILL_FAIL",
+      "url": "/api/fail"
+    }
+  ]
+}

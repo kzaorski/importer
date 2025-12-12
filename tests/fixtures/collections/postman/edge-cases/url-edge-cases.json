@@ -1,0 +1,69 @@
+{
+  "info": {
+    "name": "URL Edge Cases Collection",
+    "schema": "https://schema.postman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Host as String",
+      "request": {
+        "method": "GET",
+        "url": {
+          "protocol": "https",
+          "host": "api.example.com",
+          "path": ["users", "list"]
+        }
+      }
+    },
+    {
+      "name": "Path as String",
+      "request": {
+        "method": "GET",
+        "url": {
+          "protocol": "https",
+          "host": ["api", "example", "com"],
+          "path": "/users/profile"
+        }
+      }
+    },
+    {
+      "name": "With Port",
+      "request": {
+        "method": "GET",
+        "url": {
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "8080",
+          "path": ["api", "health"]
+        }
+      }
+    },
+    {
+      "name": "Path Only No Protocol",
+      "request": {
+        "method": "GET",
+        "url": {
+          "path": ["api", "status"]
+        }
+      }
+    },
+    {
+      "name": "Unknown URL Type",
+      "request": {
+        "method": "GET",
+        "url": 12345
+      }
+    },
+    {
+      "name": "Null URL",
+      "request": {
+        "method": "GET",
+        "url": null
+      }
+    },
+    {
+      "name": "Request as String",
+      "request": "https://api.example.com/simple"
+    }
+  ]
+}

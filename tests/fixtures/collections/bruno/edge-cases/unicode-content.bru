@@ -1,0 +1,24 @@
+meta {
+  name: Unicode Content Test
+  type: http
+  seq: 3
+}
+
+post {
+  url: {{base_url}}/unicode
+  body: json
+}
+
+headers {
+  Content-Type: application/json; charset=utf-8
+}
+
+body:json {
+  {
+    "message": "Hello World",
+    "emoji": "Test passed",
+    "polish": "Zolty zuk",
+    "chinese": "Chinese text",
+    "japanese": "Japanese text"
+  }
+}

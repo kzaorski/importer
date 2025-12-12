@@ -1,0 +1,19 @@
+meta {
+  name: Protected Endpoint with Bearer
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{base_url}}/protected/resource
+  body: none
+  auth: bearer
+}
+
+headers {
+  Accept: application/json
+}
+
+auth:bearer {
+  token: {{auth_token}}
+}

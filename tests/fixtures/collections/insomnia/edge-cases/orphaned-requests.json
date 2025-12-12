@@ -1,0 +1,35 @@
+{
+  "_type": "export",
+  "__export_format": 4,
+  "__export_date": "2024-12-08T00:00:00.000Z",
+  "resources": [
+    {
+      "_id": "wrk_test",
+      "_type": "workspace",
+      "parentId": null,
+      "name": "Orphaned Resources Test"
+    },
+    {
+      "_id": "req_orphaned",
+      "_type": "request",
+      "parentId": "fld_nonexistent",
+      "name": "Orphaned Request",
+      "method": "GET",
+      "url": "/api/orphaned"
+    },
+    {
+      "_id": "fld_real",
+      "_type": "request_group",
+      "parentId": "wrk_test",
+      "name": "Real Folder"
+    },
+    {
+      "_id": "req_valid",
+      "_type": "request",
+      "parentId": "fld_real",
+      "name": "Valid Request",
+      "method": "GET",
+      "url": "/api/valid"
+    }
+  ]
+}

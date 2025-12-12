@@ -1,0 +1,17 @@
+{
+  "_type": "export",
+  "__export_format": 4,
+  "resources": [
+    {
+      "_id": "env_test",
+      "_type": "environment",
+      "parentId": "wrk_test",
+      "name": "Test Environment",
+      "data": {
+        "base_url": "https://env.example.com",
+        "token": "env-token-xyz",
+        "null_var": null
+      }
+    }
+  ]
+}

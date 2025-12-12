@@ -1,0 +1,75 @@
+{
+  "_type": "export",
+  "__export_format": 4,
+  "__export_date": "2024-12-08T00:00:00.000Z",
+  "__export_source": "insomnia.desktop.app:v2023.5.8",
+  "resources": [
+    {
+      "_id": "wrk_nested",
+      "_type": "workspace",
+      "parentId": null,
+      "name": "Nested Folders Test",
+      "scope": "collection"
+    },
+    {
+      "_id": "fld_api",
+      "_type": "request_group",
+      "parentId": "wrk_nested",
+      "name": "api",
+      "metaSortKey": -1000000000
+    },
+    {
+      "_id": "fld_v1",
+      "_type": "request_group",
+      "parentId": "fld_api",
+      "name": "v1",
+      "metaSortKey": -1000000000
+    },
+    {
+      "_id": "fld_users",
+      "_type": "request_group",
+      "parentId": "fld_v1",
+      "name": "users",
+      "metaSortKey": -1000000000
+    },
+    {
+      "_id": "req_deep",
+      "_type": "request",
+      "parentId": "fld_users",
+      "name": "Deep Request",
+      "method": "GET",
+      "url": "https://api.example.com/api/v1/users",
+      "headers": [],
+      "body": {},
+      "authentication": {},
+      "parameters": [],
+      "metaSortKey": -1000000000
+    },
+    {
+      "_id": "req_root",
+      "_type": "request",
+      "parentId": "wrk_nested",
+      "name": "Root Level Request",
+      "method": "GET",
+      "url": "https://api.example.com/health",
+      "headers": [],
+      "body": {},
+      "authentication": {},
+      "parameters": [],
+      "metaSortKey": -999999999
+    },
+    {
+      "_id": "req_v1_level",
+      "_type": "request",
+      "parentId": "fld_v1",
+      "name": "V1 Level Request",
+      "method": "GET",
+      "url": "https://api.example.com/api/v1/status",
+      "headers": [],
+      "body": {},
+      "authentication": {},
+      "parameters": [],
+      "metaSortKey": -999999998
+    }
+  ]
+}

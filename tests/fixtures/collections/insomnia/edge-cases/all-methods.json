@@ -1,0 +1,92 @@
+{
+  "_type": "export",
+  "__export_format": 4,
+  "__export_date": "2024-12-08T00:00:00.000Z",
+  "__export_source": "insomnia.desktop.app:v2023.5.8",
+  "resources": [
+    {
+      "_id": "wrk_methods",
+      "_type": "workspace",
+      "parentId": null,
+      "name": "All HTTP Methods",
+      "scope": "collection"
+    },
+    {
+      "_id": "req_get",
+      "_type": "request",
+      "parentId": "wrk_methods",
+      "name": "GET Request",
+      "method": "GET",
+      "url": "https://api.example.com/resource",
+      "headers": [],
+      "body": {},
+      "metaSortKey": -1000000006
+    },
+    {
+      "_id": "req_post",
+      "_type": "request",
+      "parentId": "wrk_methods",
+      "name": "POST Request",
+      "method": "POST",
+      "url": "https://api.example.com/resource",
+      "headers": [],
+      "body": {"mimeType": "application/json", "text": "{}"},
+      "metaSortKey": -1000000005
+    },
+    {
+      "_id": "req_put",
+      "_type": "request",
+      "parentId": "wrk_methods",
+      "name": "PUT Request",
+      "method": "PUT",
+      "url": "https://api.example.com/resource/1",
+      "headers": [],
+      "body": {"mimeType": "application/json", "text": "{}"},
+      "metaSortKey": -1000000004
+    },
+    {
+      "_id": "req_patch",
+      "_type": "request",
+      "parentId": "wrk_methods",
+      "name": "PATCH Request",
+      "method": "PATCH",
+      "url": "https://api.example.com/resource/1",
+      "headers": [],
+      "body": {"mimeType": "application/json", "text": "{}"},
+      "metaSortKey": -1000000003
+    },
+    {
+      "_id": "req_delete",
+      "_type": "request",
+      "parentId": "wrk_methods",
+      "name": "DELETE Request",
+      "method": "DELETE",
+      "url": "https://api.example.com/resource/1",
+      "headers": [],
+      "body": {},
+      "metaSortKey": -1000000002
+    },
+    {
+      "_id": "req_head",
+      "_type": "request",
+      "parentId": "wrk_methods",
+      "name": "HEAD Request",
+      "method": "HEAD",
+      "url": "https://api.example.com/resource",
+      "headers": [],
+      "body": {},
+      "metaSortKey": -1000000001
+    },
+    {
+      "_id": "req_options",
+      "_type": "request",
+      "parentId": "wrk_methods",
+      "name": "OPTIONS Request",
+      "method": "OPTIONS",
+      "url": "https://api.example.com/resource",
+      "headers": [],
+      "body": {},
+      "metaSortKey": -1000000000
+    }
+  ]
+}

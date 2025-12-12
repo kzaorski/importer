@@ -1,0 +1,142 @@
+{
+  "info": {
+    "name": "All HTTP Methods Collection",
+    "_postman_id": "methods-001",
+    "description": "Collection testing all HTTP methods",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "GET Request",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{base_url}}/resource",
+          "host": ["{{base_url}}"],
+          "path": ["resource"]
+        }
+      }
+    },
+    {
+      "name": "POST Request",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "url": {
+          "raw": "{{base_url}}/resource",
+          "host": ["{{base_url}}"],
+          "path": ["resource"]
+        },
+        "body": {
+          "mode": "raw",
+          "raw": "{\"data\": \"test\"}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        }
+      }
+    },
+    {
+      "name": "PUT Request",
+      "request": {
+        "method": "PUT",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "url": {
+          "raw": "{{base_url}}/resource/1",
+          "host": ["{{base_url}}"],
+          "path": ["resource", "1"]
+        },
+        "body": {
+          "mode": "raw",
+          "raw": "{\"data\": \"updated\"}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        }
+      }
+    },
+    {
+      "name": "PATCH Request",
+      "request": {
+        "method": "PATCH",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "url": {
+          "raw": "{{base_url}}/resource/1",
+          "host": ["{{base_url}}"],
+          "path": ["resource", "1"]
+        },
+        "body": {
+          "mode": "raw",
+          "raw": "{\"field\": \"patched\"}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        }
+      }
+    },
+    {
+      "name": "DELETE Request",
+      "request": {
+        "method": "DELETE",
+        "header": [],
+        "url": {
+          "raw": "{{base_url}}/resource/1",
+          "host": ["{{base_url}}"],
+          "path": ["resource", "1"]
+        }
+      }
+    },
+    {
+      "name": "HEAD Request",
+      "request": {
+        "method": "HEAD",
+        "header": [],
+        "url": {
+          "raw": "{{base_url}}/resource",
+          "host": ["{{base_url}}"],
+          "path": ["resource"]
+        }
+      }
+    },
+    {
+      "name": "OPTIONS Request",
+      "request": {
+        "method": "OPTIONS",
+        "header": [],
+        "url": {
+          "raw": "{{base_url}}/resource",
+          "host": ["{{base_url}}"],
+          "path": ["resource"]
+        }
+      }
+    }
+  ],
+  "variable": [
+    {
+      "key": "base_url",
+      "value": "https://api.example.com"
+    }
+  ]
+}

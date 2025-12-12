@@ -1,0 +1,81 @@
+{
+  "_type": "export",
+  "__export_format": 4,
+  "__export_date": "2024-12-08T00:00:00.000Z",
+  "resources": [
+    {
+      "_id": "wrk_test",
+      "_type": "workspace",
+      "parentId": null,
+      "name": "Body Edge Cases Test"
+    },
+    {
+      "_id": "req_empty_mime",
+      "_type": "request",
+      "parentId": "wrk_test",
+      "name": "Empty MimeType",
+      "method": "POST",
+      "url": "/api/empty-mime",
+      "body": {
+        "mimeType": "",
+        "text": "some content"
+      }
+    },
+    {
+      "_id": "req_invalid_json",
+      "_type": "request",
+      "parentId": "wrk_test",
+      "name": "Invalid JSON Body",
+      "method": "POST",
+      "url": "/api/invalid-json",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{not valid json"
+      }
+    },
+    {
+      "_id": "req_disabled_form",
+      "_type": "request",
+      "parentId": "wrk_test",
+      "name": "Form With Disabled Params",
+      "method": "POST",
+      "url": "/api/form",
+      "body": {
+        "mimeType": "application/x-www-form-urlencoded",
+        "params": [
+          {"name": "active_field", "value": "active_value"},
+          {"name": "disabled_field", "value": "disabled_value", "disabled": true},
+          {"name": "", "value": "empty_name_value"},
+          "not_a_dict_param",
+          {"name": "another_active", "value": "another_value"}
+        ]
+      }
+    },
+    {
+      "_id": "req_all_disabled_form",
+      "_type": "request",
+      "parentId": "wrk_test",
+      "name": "All Disabled Form Params",
+      "method": "POST",
+      "url": "/api/all-disabled",
+      "body": {
+        "mimeType": "application/x-www-form-urlencoded",
+        "params": [
+          {"name": "field1", "value": "value1", "disabled": true},
+          {"name": "field2", "value": "value2", "disabled": true}
+        ]
+      }
+    },
+    {
+      "_id": "req_unknown_mime",
+      "_type": "request",
+      "parentId": "wrk_test",
+      "name": "Unknown MimeType No Text",
+      "method": "POST",
+      "url": "/api/unknown-mime",
+      "body": {
+        "mimeType": "application/octet-stream"
+      }
+    }
+  ]
+}

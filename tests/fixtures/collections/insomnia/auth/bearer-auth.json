@@ -1,0 +1,60 @@
+{
+  "_type": "export",
+  "__export_format": 4,
+  "__export_date": "2024-12-08T00:00:00.000Z",
+  "__export_source": "insomnia.desktop.app:v2023.5.8",
+  "resources": [
+    {
+      "_id": "wrk_auth",
+      "_type": "workspace",
+      "parentId": null,
+      "name": "Bearer Auth Test",
+      "scope": "collection"
+    },
+    {
+      "_id": "env_auth",
+      "_type": "environment",
+      "parentId": "wrk_auth",
+      "name": "Base Environment",
+      "data": {
+        "base_url": "https://api.example.com",
+        "auth_token": "secret-bearer-token"
+      }
+    },
+    {
+      "_id": "req_protected",
+      "_type": "request",
+      "parentId": "wrk_auth",
+      "name": "Protected Resource",
+      "method": "GET",
+      "url": "{{base_url}}/protected",
+      "headers": [
+        {"id": "pair_1", "name": "Accept", "value": "application/json"}
+      ],
+      "body": {},
+      "authentication": {
+        "type": "bearer",
+        "token": "{{auth_token}}",
+        "prefix": "Bearer"
+      },
+      "parameters": [],
+      "metaSortKey": -1000000000
+    },
+    {
+      "_id": "req_profile",
+      "_type": "request",
+      "parentId": "wrk_auth",
+      "name": "Get Profile",
+      "method": "GET",
+      "url": "{{base_url}}/profile",
+      "headers": [],
+      "body": {},
+      "authentication": {
+        "type": "bearer",
+        "token": "static-token-value"
+      },
+      "parameters": [],
+      "metaSortKey": -999999999
+    }
+  ]
+}

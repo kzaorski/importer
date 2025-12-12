@@ -1,0 +1,6 @@
+{
+  "base_url": "https://api.example.com",
+  "api_key": "test-key-123",
+  "user_id": "456",
+  "null_value": null
+}

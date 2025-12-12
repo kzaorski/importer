@@ -1,0 +1,14 @@
+meta {
+  name: Get Post by ID
+  type: http
+  seq: 2
+}
+
+get {
+  url: {{base_url}}/posts/{{post_id}}
+  body: none
+}
+
+headers {
+  Accept: application/json
+}

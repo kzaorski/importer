@@ -1,0 +1,30 @@
+{
+  "info": {
+    "name": "Variable Edge Cases Collection",
+    "schema": "https://schema.postman.com/json/collection/v2.1.0/collection.json"
+  },
+  "variable": [
+    {
+      "key": "valid_var",
+      "value": "valid-value"
+    },
+    "not-a-dict-variable",
+    {
+      "key": "",
+      "value": "empty-key-value"
+    },
+    {
+      "key": "base_url",
+      "value": "https://api.example.com"
+    }
+  ],
+  "item": [
+    {
+      "name": "Simple Request",
+      "request": {
+        "method": "GET",
+        "url": "{{base_url}}/api/test"
+      }
+    }
+  ]
+}

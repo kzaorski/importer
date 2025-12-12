@@ -1,0 +1,35 @@
+{
+  "info": {
+    "name": "Header Edge Cases Collection",
+    "schema": "https://schema.postman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Mixed Headers",
+      "request": {
+        "method": "GET",
+        "url": "/api/test",
+        "header": [
+          {
+            "key": "Valid-Header",
+            "value": "valid-value"
+          },
+          "not-a-dict-header",
+          {
+            "key": "Disabled-Header",
+            "value": "disabled-value",
+            "disabled": true
+          },
+          {
+            "key": "",
+            "value": "empty-key-value"
+          },
+          {
+            "key": "Another-Valid",
+            "value": "another-value"
+          }
+        ]
+      }
+    }
+  ]
+}

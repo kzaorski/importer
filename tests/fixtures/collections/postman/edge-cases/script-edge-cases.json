@@ -1,0 +1,45 @@
+{
+  "info": {
+    "name": "Script Edge Cases Collection",
+    "schema": "https://schema.postman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Script Exec as String",
+      "request": {
+        "method": "GET",
+        "url": "/api/script-string"
+      },
+      "event": [
+        {
+          "listen": "prerequest",
+          "script": {
+            "exec": "console.log('pre-request');"
+          }
+        },
+        {
+          "listen": "test",
+          "script": {
+            "exec": "console.log('post-response');"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Event Not Dict",
+      "request": {
+        "method": "GET",
+        "url": "/api/event-not-dict"
+      },
+      "event": [
+        "not-a-dict-event",
+        {
+          "listen": "test",
+          "script": {
+            "exec": ["pm.test('test', function() {});"]
+          }
+        }
+      ]
+    }
+  ]
+}

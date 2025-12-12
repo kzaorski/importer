@@ -1,0 +1,72 @@
+{
+  "info": {
+    "name": "JSON Body Collection",
+    "_postman_id": "body-json-001",
+    "description": "Collection with JSON body requests",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Create Resource",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "url": {
+          "raw": "{{base_url}}/resources",
+          "host": ["{{base_url}}"],
+          "path": ["resources"]
+        },
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"title\": \"{{title}}\",\n  \"description\": \"Test description\",\n  \"active\": true,\n  \"count\": 42\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        }
+      }
+    },
+    {
+      "name": "Update Resource",
+      "request": {
+        "method": "PUT",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "url": {
+          "raw": "{{base_url}}/resources/{{resource_id}}",
+          "host": ["{{base_url}}"],
+          "path": ["resources", "{{resource_id}}"]
+        },
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"title\": \"Updated Title\",\n  \"active\": false\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        }
+      }
+    }
+  ],
+  "variable": [
+    {
+      "key": "base_url",
+      "value": "https://api.example.com"
+    },
+    {
+      "key": "resource_id",
+      "value": "456"
+    }
+  ]
+}

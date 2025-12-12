@@ -1,0 +1,20 @@
+meta {
+  name: Request with Pre-Script
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{base_url}}/data
+  body: none
+}
+
+headers {
+  X-Request-ID: {{request_id}}
+}
+
+script:pre-request {
+  const uuid = require('uuid');
+  bru.setVar('request_id', uuid.v4());
+  console.log('Pre-request script executed');
+}

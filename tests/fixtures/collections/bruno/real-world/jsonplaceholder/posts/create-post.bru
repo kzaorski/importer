@@ -1,0 +1,23 @@
+meta {
+  name: Create Post
+  type: http
+  seq: 3
+}
+
+post {
+  url: {{base_url}}/posts
+  body: json
+}
+
+headers {
+  Content-Type: application/json
+  Accept: application/json
+}
+
+body:json {
+  {
+    "title": "{{post_title}}",
+    "body": "{{post_body}}",
+    "userId": {{user_id}}
+  }
+}

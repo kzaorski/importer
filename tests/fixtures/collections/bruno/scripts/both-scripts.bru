@@ -1,0 +1,36 @@
+meta {
+  name: Request with Both Scripts
+  type: http
+  seq: 3
+}
+
+post {
+  url: {{base_url}}/process
+  body: json
+}
+
+headers {
+  Content-Type: application/json
+  X-Correlation-ID: {{correlation_id}}
+}
+
+body:json {
+  {
+    "timestamp": "{{timestamp}}",
+    "action": "process"
+  }
+}
+
+script:pre-request {
+  bru.setVar('correlation_id', 'corr-' + Date.now());
+  bru.setVar('timestamp', new Date().toISOString());
+}
+
+script:post-response {
+  const result = res.body;
+  bru.setVar('process_result', result.status);
+
+  if (res.status !== 200) {
+    console.error('Process failed:', result.error);
+  }
+}

@@ -1,0 +1,88 @@
+{
+  "info": {
+    "name": "Form Body Collection",
+    "_postman_id": "body-form-001",
+    "description": "Collection with form-urlencoded and formdata body",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Submit Form URL Encoded",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "url": {
+          "raw": "{{base_url}}/form",
+          "host": ["{{base_url}}"],
+          "path": ["form"]
+        },
+        "body": {
+          "mode": "urlencoded",
+          "urlencoded": [
+            {
+              "key": "username",
+              "value": "{{username}}",
+              "type": "text"
+            },
+            {
+              "key": "password",
+              "value": "{{password}}",
+              "type": "text"
+            },
+            {
+              "key": "remember_me",
+              "value": "true",
+              "type": "text"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "Submit FormData",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "url": {
+          "raw": "{{base_url}}/upload",
+          "host": ["{{base_url}}"],
+          "path": ["upload"]
+        },
+        "body": {
+          "mode": "formdata",
+          "formdata": [
+            {
+              "key": "title",
+              "value": "My Upload",
+              "type": "text"
+            },
+            {
+              "key": "description",
+              "value": "{{description}}",
+              "type": "text"
+            },
+            {
+              "key": "file",
+              "type": "file",
+              "src": "/path/to/file.txt"
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "variable": [
+    {
+      "key": "base_url",
+      "value": "https://api.example.com"
+    },
+    {
+      "key": "username",
+      "value": "testuser"
+    },
+    {
+      "key": "password",
+      "value": "testpass"
+    }
+  ]
+}

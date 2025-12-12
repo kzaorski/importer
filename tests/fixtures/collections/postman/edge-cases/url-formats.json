@@ -1,0 +1,91 @@
+{
+  "info": {
+    "name": "URL Formats Collection",
+    "_postman_id": "url-formats-001",
+    "description": "Collection testing various URL formats",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "URL as String",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": "{{base_url}}/simple"
+      }
+    },
+    {
+      "name": "URL with Query Params Object",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{base_url}}/search?q={{query}}&limit=10",
+          "host": ["{{base_url}}"],
+          "path": ["search"],
+          "query": [
+            {
+              "key": "q",
+              "value": "{{query}}"
+            },
+            {
+              "key": "limit",
+              "value": "10"
+            },
+            {
+              "key": "disabled_param",
+              "value": "ignored",
+              "disabled": true
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "URL with Path Variables",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{base_url}}/users/:userId/posts/:postId",
+          "host": ["{{base_url}}"],
+          "path": ["users", ":userId", "posts", ":postId"],
+          "variable": [
+            {
+              "key": "userId",
+              "value": "{{user_id}}"
+            },
+            {
+              "key": "postId",
+              "value": "{{post_id}}"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "Full URL with Port",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8080/api/v1/health",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "8080",
+          "path": ["api", "v1", "health"]
+        }
+      }
+    }
+  ],
+  "variable": [
+    {
+      "key": "base_url",
+      "value": "https://api.example.com"
+    },
+    {
+      "key": "query",
+      "value": "test"
+    }
+  ]
+}

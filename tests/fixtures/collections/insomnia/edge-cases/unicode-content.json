@@ -1,0 +1,56 @@
+{
+  "_type": "export",
+  "__export_format": 4,
+  "__export_date": "2024-12-08T00:00:00.000Z",
+  "__export_source": "insomnia.desktop.app:v2023.5.8",
+  "resources": [
+    {
+      "_id": "wrk_unicode",
+      "_type": "workspace",
+      "parentId": null,
+      "name": "Unicode Test",
+      "scope": "collection"
+    },
+    {
+      "_id": "fld_polish",
+      "_type": "request_group",
+      "parentId": "wrk_unicode",
+      "name": "Polskie znaki",
+      "metaSortKey": -1000000000
+    },
+    {
+      "_id": "req_unicode",
+      "_type": "request",
+      "parentId": "fld_polish",
+      "name": "Pobierz dane",
+      "method": "POST",
+      "url": "https://api.example.com/dane",
+      "headers": [
+        {"id": "pair_1", "name": "X-Custom-Header", "value": "wartość z polskimi znakami: ąęółżźćń"}
+      ],
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\"imię\": \"Jan\", \"nazwisko\": \"Kowalski\", \"opis\": \"Zażółć gęślą jaźń\"}"
+      },
+      "authentication": {},
+      "parameters": [],
+      "metaSortKey": -1000000000
+    },
+    {
+      "_id": "req_emoji",
+      "_type": "request",
+      "parentId": "wrk_unicode",
+      "name": "Emoji Request",
+      "method": "POST",
+      "url": "https://api.example.com/emoji",
+      "headers": [],
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\"message\": \"Hello World! 👋🌍\"}"
+      },
+      "authentication": {},
+      "parameters": [],
+      "metaSortKey": -999999999
+    }
+  ]
+}

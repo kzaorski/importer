@@ -1,0 +1,15 @@
+meta {
+  name: Get User
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{base_url}}/users/{{username}}
+  body: none
+}
+
+headers {
+  Accept: application/vnd.github.v3+json
+  User-Agent: Bruno-API-Client
+}

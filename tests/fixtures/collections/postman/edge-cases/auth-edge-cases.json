@@ -1,0 +1,98 @@
+{
+  "info": {
+    "name": "Auth Edge Cases Collection",
+    "schema": "https://schema.postman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Basic Auth No Credentials",
+      "request": {
+        "method": "GET",
+        "url": "/api/basic-empty",
+        "auth": {
+          "type": "basic",
+          "basic": []
+        }
+      }
+    },
+    {
+      "name": "API Key Header",
+      "request": {
+        "method": "GET",
+        "url": "/api/apikey-header",
+        "auth": {
+          "type": "apikey",
+          "apikey": [
+            {
+              "key": "key",
+              "value": "X-API-Key"
+            },
+            {
+              "key": "value",
+              "value": "my-secret-key"
+            },
+            {
+              "key": "in",
+              "value": "header"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "API Key Query",
+      "request": {
+        "method": "GET",
+        "url": "/api/apikey-query",
+        "auth": {
+          "type": "apikey",
+          "apikey": [
+            {
+              "key": "key",
+              "value": "api_key"
+            },
+            {
+              "key": "value",
+              "value": "my-query-key"
+            },
+            {
+              "key": "in",
+              "value": "query"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "API Key Missing Value",
+      "request": {
+        "method": "GET",
+        "url": "/api/apikey-missing",
+        "auth": {
+          "type": "apikey",
+          "apikey": [
+            {
+              "key": "key",
+              "value": "X-API-Key"
+            },
+            {
+              "key": "in",
+              "value": "header"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "Unknown Auth Type",
+      "request": {
+        "method": "GET",
+        "url": "/api/unknown-auth",
+        "auth": {
+          "type": "oauth2",
+          "oauth2": []
+        }
+      }
+    }
+  ]
+}

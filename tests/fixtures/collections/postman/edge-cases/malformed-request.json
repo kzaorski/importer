@@ -1,0 +1,26 @@
+{
+  "info": {
+    "name": "Malformed Request Collection",
+    "schema": "https://schema.postman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Valid Request",
+      "request": {
+        "method": "GET",
+        "url": "/api/valid"
+      }
+    },
+    {
+      "name": "Malformed Request",
+      "request": null
+    },
+    {
+      "name": "Another Valid Request",
+      "request": {
+        "method": "POST",
+        "url": "/api/another-valid"
+      }
+    }
+  ]
+}
