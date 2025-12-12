@@ -83,7 +83,7 @@ Thumbs.db
 real_examples/
 
 # Claude Code local settings
-.claude/settings.local.json
+.claude/
 
 # Pip artifacts
 =*
